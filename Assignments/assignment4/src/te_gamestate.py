@@ -21,6 +21,26 @@ class GameState():
         '''
         return self.__model.falling_block_angle
 
+    def get_falling_block_type(self):
+        '''get_falling_block_type() returns a str denoting the current
+        falling block type I, J, L, O, S, T, Z
+        '''
+        return self.__model.falling_block_type
+
+    def get_falling_block_raw(self):
+        ''' returns the falling block object'''
+        return self.__model.falling_block
+
+    def get_next_block_raw(self):
+        ''' returns the next block object '''
+        return self.__model.next_block
+
+    def get_next_block_type(self):
+        '''get_falling_block_type() returns a str denoting the next
+        falling block type I, J, L, O, S, T, Z
+        '''
+        return self.__model.next_block_type
+
     def get_tiles(self):
         '''get_tiles() returns a copy of the tiles that have settled in the
             arena.  The falling block is not included in these

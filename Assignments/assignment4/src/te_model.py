@@ -115,7 +115,7 @@ class Block():
         self.__x = x
         self.__y = y
         self.__angle = 0
-        self.__type = block_type
+        self.type = block_type
         self.__falling = falling
         if block_type == 'I':
             self.__bitmap = IBlock()
@@ -326,6 +326,22 @@ class Model():
     @property
     def falling_block_angle(self):
         return self.__falling_block.angle
+
+    @property
+    def falling_block(self):
+        return self.__falling_block
+
+    @property
+    def falling_block_type(self):
+        return self.__falling_block.type
+
+    @property
+    def next_block(self):
+        return self.__next_block
+
+    @property
+    def next_block_type(self):
+        return self.__next_block.type
 
     def get_copy_of_tiles(self):
         return self.__blockfield.get_copy_of_tiles()
